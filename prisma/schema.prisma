@@ -124,18 +124,18 @@ model MmsVehicle {
   id                        String    @id @unique @default(uuid())
   plantCode                 String
   ageOfVehicle              String?
-  asuransiKadaluarsa        DateTime?
+  asuransiKadaluarsa        String?
   changeHeadTruck           String?
-  compartment1Flow          Boolean?
-  compartment2Flow          Boolean?
-  compartment3Flow          Boolean?
-  compartment4Flow          Boolean?
-  compartment5Flow          Boolean?
-  compartment6Flow          Boolean?
+  compartment1Flow          String?
+  compartment2Flow          String?
+  compartment3Flow          String?
+  compartment4Flow          String?
+  compartment5Flow          String?
+  compartment6Flow          String?
   contractInsuranceSchemeId String?
   contractRateSchemeId      String?
-  dateRegHeadTruck          DateTime?
-  deductibleInsurance       Boolean?
+  dateRegHeadTruck          String?
+  deductibleInsurance       String?
   grade                     String?
   idTbbm                    String?
   idTbbmPenempatan          String?
@@ -145,56 +145,56 @@ model MmsVehicle {
   jeniskerjasama            String?
   jenissewaPenempatan       String?
   jenisusaha                String?
-  jmlSegel                  Int?
-  jmlSumbu                  Int?
-  jumlahBan                 Int?
-  jumlahKompartemen         Int?
+  jmlSegel                  String?
+  jmlSumbu                  String?
+  jumlahBan                 String?
+  jumlahKompartemen         String?
   kapasitas                 String?
-  kapasitasTangkiJalanBbm   Float?
-  kapasitasTangkiJalanOli   Float?
-  karoseri                  Boolean?
+  kapasitasTangkiJalanBbm   String?
+  kapasitasTangkiJalanOli   String?
+  karoseri                  String?
   kelasBan                  String?
   kepemilikan               String?
   ket                       String?
   keterangan                String?
-  ketersediaan              Boolean?
-  keurKadaluarsa            DateTime?
-  kimImkKadaluarsa          DateTime?
-  kompartemen1Kepekaan      Float?
-  kompartemen1RKosong       Float?
-  kompartemen1TeraUlang     Float?
-  kompartemen1Uom           Float?
-  kompartemen1Vol           Float?
-  kompartemen2Kepekaan      Float?
-  kompartemen2RKosong       Float?
-  kompartemen2TeraUlang     Float?
-  kompartemen2Uom           Float?
-  kompartemen2Vol           Float?
-  kompartemen3Kepekaan      Float?
-  kompartemen3RKosong       Float?
-  kompartemen3TeraUlang     Float?
-  kompartemen3Uom           Float?
-  kompartemen3Vol           Float?
-  kompartemen4Kepekaan      Float?
-  kompartemen4RKosong       Float?
-  kompartemen4TeraUlang     Float?
-  kompartemen4Uom           Float?
-  kompartemen4Vol           Float?
-  kompartemen5Kepekaan      Float?
-  kompartemen5RKosong       Float?
-  kompartemen5TeraUlang     Float?
-  kompartemen5Uom           Float?
-  kompartemen5Vol           Float?
-  kompartemen6Kepekaan      Float?
-  kompartemen6RKosong       Float?
-  kompartemen6TeraUlang     Float?
-  kompartemen6Uom           Float?
-  kompartemen6Vol           Float?
-  loket                     Int?
+  ketersediaan              String?
+  keurKadaluarsa            String?
+  kimImkKadaluarsa          String?
+  kompartemen1Kepekaan      String?
+  kompartemen1RKosong       String?
+  kompartemen1TeraUlang     String?
+  kompartemen1Uom           String?
+  kompartemen1Vol           String?
+  kompartemen2Kepekaan      String?
+  kompartemen2RKosong       String?
+  kompartemen2TeraUlang     String?
+  kompartemen2Uom           String?
+  kompartemen2Vol           String?
+  kompartemen3Kepekaan      String?
+  kompartemen3RKosong       String?
+  kompartemen3TeraUlang     String?
+  kompartemen3Uom           String?
+  kompartemen3Vol           String?
+  kompartemen4Kepekaan      String?
+  kompartemen4RKosong       String?
+  kompartemen4TeraUlang     String?
+  kompartemen4Uom           String?
+  kompartemen4Vol           String?
+  kompartemen5Kepekaan      String?
+  kompartemen5RKosong       String?
+  kompartemen5TeraUlang     String?
+  kompartemen5Uom           String?
+  kompartemen5Vol           String?
+  kompartemen6Kepekaan      String?
+  kompartemen6RKosong       String?
+  kompartemen6TeraUlang     String?
+  kompartemen6Uom           String?
+  kompartemen6Vol           String?
+  loket                     String?
   material                  String?
   monthlyInsurance          String?
-  monthlyRate               Float?
-  mtCategory                Int?
+  monthlyRate               String?
+  mtCategory                String?
   mtKaroseri                String?
   mtScheme                  String?
   noMesin                   String?
@@ -202,17 +202,17 @@ model MmsVehicle {
   penempatanActive          String?
   produkList                String?
   rangka                    String?
-  rasioOwnUseBbm            Float?
+  rasioOwnUseBbm            String?
   refHeadTruck              String?
   region                    String?
   sistemusaha               String?
-  siupKadaluarsa            DateTime?
+  siupKadaluarsa            String?
   statusPenempatan          String?
-  stnkKadaluarsa            DateTime?
-  tanggalPembuatan          DateTime?
+  stnkKadaluarsa            String?
+  tanggalPembuatan          String?
   tbbm                      String?
   tbbmPenempatan            String?
-  teraKadaluarsa            DateTime?
+  teraKadaluarsa            String?
   tipeMobil                 String?
   transportir               String?
   vendorGps                 String?
