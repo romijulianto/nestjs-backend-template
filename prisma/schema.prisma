@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlserver"
   url      = env("DATABASE_URL")
 }
 
@@ -30,4 +30,191 @@ model User {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   articles  Article[]
+}
+
+model MtGpsLastLocation {
+  ASSET_ID    String
+  EVENT_NAME  String
+  FLEET_ID    String
+  FLEET_NAME  String
+  GPS_TIME    DateTime?
+  HEADING     String
+  ID          String
+  JALAN       String
+  KABUPATEN   String
+  KECAMATAN   String
+  LATITUDE    String
+  LONGITUDE   String
+  ODOMETER    String
+  PLATENO     String
+  SPEED       Float
+  ZONENAME    String
+  INSERT_DATE DateTime  @unique
+}
+
+model ShipmentGateOut {
+  id               String   @id @unique @default(uuid())
+  plantCode        String
+  createDate       DateTime
+  nomorLo          String
+  kodeProduk       String
+  produk           String
+  klDo             String
+  spbu             String
+  shipTo           String
+  jarak            String
+  sonumber         String
+  gisStatus        String
+  extraInfo        String
+  gateoutTime      DateTime
+  jmlsegel         Int
+  kernet           String
+  lastUpdate       DateTime
+  mt               String
+  mysapshipmentnum String
+  mysapstatus      String
+  nipKernet        String
+  nipSupir         String
+  segel            String
+  shipmentDate     DateTime
+  shipmentEnd      DateTime
+  shipmentId       Int
+  siodId           String
+  siodState        String
+  stateDetail      Int
+  supir            String
+  insertDate       DateTime
+}
+
+model ShipmentEndClose {
+  id               String   @id @unique @default(uuid())
+  plantCode        String
+  createDate       DateTime
+  nomorLo          String
+  kodeProduk       String
+  produk           String
+  klDo             String
+  spbu             String
+  shipTo           String
+  jarak            String
+  sonumber         String
+  gisStatus        String
+  extraInfo        String
+  gateoutTime      DateTime
+  jmlsegel         Int
+  kernet           String
+  lastUpdate       DateTime
+  mt               String
+  mysapshipmentnum String
+  mysapstatus      String
+  nipKernet        String
+  nipSupir         String
+  segel            String
+  shipmentDate     DateTime
+  shipmentEnd      DateTime
+  shipmentId       Int
+  siodId           String
+  siodState        String
+  stateDetail      Int
+  supir            String
+  insertDate       DateTime
+}
+
+model MmsVehicle {
+  id                        String    @id @unique @default(uuid())
+  plantCode                 String
+  ageOfVehicle              String?
+  asuransiKadaluarsa        DateTime?
+  changeHeadTruck           String?
+  compartment1Flow          Boolean?
+  compartment2Flow          Boolean?
+  compartment3Flow          Boolean?
+  compartment4Flow          Boolean?
+  compartment5Flow          Boolean?
+  compartment6Flow          Boolean?
+  contractInsuranceSchemeId String?
+  contractRateSchemeId      String?
+  dateRegHeadTruck          DateTime?
+  deductibleInsurance       Boolean?
+  grade                     String?
+  idTbbm                    String?
+  idTbbmPenempatan          String?
+  idTruck                   String?
+  insuranceType             String?
+  jenis                     String?
+  jeniskerjasama            String?
+  jenissewaPenempatan       String?
+  jenisusaha                String?
+  jmlSegel                  Int?
+  jmlSumbu                  Int?
+  jumlahBan                 Int?
+  jumlahKompartemen         Int?
+  kapasitas                 String?
+  kapasitasTangkiJalanBbm   Float?
+  kapasitasTangkiJalanOli   Float?
+  karoseri                  Boolean?
+  kelasBan                  String?
+  kepemilikan               String?
+  ket                       String?
+  keterangan                String?
+  ketersediaan              Boolean?
+  keurKadaluarsa            DateTime?
+  kimImkKadaluarsa          DateTime?
+  kompartemen1Kepekaan      Float?
+  kompartemen1RKosong       Float?
+  kompartemen1TeraUlang     Float?
+  kompartemen1Uom           Float?
+  kompartemen1Vol           Float?
+  kompartemen2Kepekaan      Float?
+  kompartemen2RKosong       Float?
+  kompartemen2TeraUlang     Float?
+  kompartemen2Uom           Float?
+  kompartemen2Vol           Float?
+  kompartemen3Kepekaan      Float?
+  kompartemen3RKosong       Float?
+  kompartemen3TeraUlang     Float?
+  kompartemen3Uom           Float?
+  kompartemen3Vol           Float?
+  kompartemen4Kepekaan      Float?
+  kompartemen4RKosong       Float?
+  kompartemen4TeraUlang     Float?
+  kompartemen4Uom           Float?
+  kompartemen4Vol           Float?
+  kompartemen5Kepekaan      Float?
+  kompartemen5RKosong       Float?
+  kompartemen5TeraUlang     Float?
+  kompartemen5Uom           Float?
+  kompartemen5Vol           Float?
+  kompartemen6Kepekaan      Float?
+  kompartemen6RKosong       Float?
+  kompartemen6TeraUlang     Float?
+  kompartemen6Uom           Float?
+  kompartemen6Vol           Float?
+  loket                     Int?
+  material                  String?
+  monthlyInsurance          String?
+  monthlyRate               Float?
+  mtCategory                Int?
+  mtKaroseri                String?
+  mtScheme                  String?
+  noMesin                   String?
+  noPolisInsurance          String?
+  penempatanActive          String?
+  produkList                String?
+  rangka                    String?
+  rasioOwnUseBbm            Float?
+  refHeadTruck              String?
+  region                    String?
+  sistemusaha               String?
+  siupKadaluarsa            DateTime?
+  statusPenempatan          String?
+  stnkKadaluarsa            DateTime?
+  tanggalPembuatan          DateTime?
+  tbbm                      String?
+  tbbmPenempatan            String?
+  teraKadaluarsa            DateTime?
+  tipeMobil                 String?
+  transportir               String?
+  vendorGps                 String?
+  insertDate                DateTime  @default(now())
 }

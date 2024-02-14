@@ -7,15 +7,15 @@ const prisma = new PrismaClient();
 const roundsOfString = 10;
 
 async function main() {
-  const passwordRomi1 = await bcrypt.hash('romijulianto1', roundsOfString);
-  const passwordRomi2 = await bcrypt.hash('romijulianto2', roundsOfString);
+  const passwordRomi1 = await bcrypt.hash('', roundsOfString);
+  const passwordRomi2 = await bcrypt.hash('', roundsOfString);
   try {
     const user1 = await prisma.user.upsert({
-      where: { email: 'romijulianto@admin.com' },
+      where: { email: 'command.center@pertamina.com' },
       update: { password: passwordRomi1 },
       create: {
-        email: 'romijulianto@admin.com',
-        name: 'Romi Julianto',
+        email: 'command.center@pertamina.com',
+        name: 'Command Center',
         password: passwordRomi1,
       },
     });

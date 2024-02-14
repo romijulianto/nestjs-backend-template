@@ -17,7 +17,7 @@ async function bootstrap() {
   /* TODO: use ClassSerializerInterceptor to remove a field from the response */
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
-  app.setGlobalPrefix('median');
+  app.setGlobalPrefix('snd');
   setupSwagger(app); // TODO:running and setup swagger
   await app.listen(process.env.PORT, '0.0.0.0');
 }

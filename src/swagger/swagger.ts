@@ -4,16 +4,16 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 export function setupSwagger(app: INestApplication) {
   // TODO: setting up swagger api/documentation
   const config = new DocumentBuilder()
-    .setTitle('Median')
-    .setDescription('The Median API description')
+    .setTitle('Supply and Distribution Monitoring Backend')
+    .setDescription('The SnD API description')
     .setVersion('1.0')
     .addTag('articles', 'endpoint for article transaction')
     .addTag('users', 'endpoint for users transaction')
     .addTag('auth', 'endpoint for auth get token')
     .setBasePath('api/docs')
     .addBearerAuth()
-    .addServer('https://api.romijulianto.my.id/', 'HTTPS')
-    .addServer('http://localhost:3001/', 'HTTP')
+    .addServer(`http://localhost:${process.env.PORT}/`, 'HTTP')
+    .addServer('https://api.romijulianto.my.id/snd', 'HTTPS')
     .setContact(
       'Romi Julianto',
       'https://www.linkedin.com/in/romijulianto/',
@@ -28,16 +28,16 @@ export function setupSwagger(app: INestApplication) {
       displayRequestDuration: true,
       filter: true,
     },
-    customSiteTitle: 'Median Backend',
-    swaggerUrl: 'http://localhost:3001/median/api/docs/',
+    customSiteTitle: 'SND Monitoring',
+    swaggerUrl: `http://localhost:${process.env.PORT}/snd/api/docs/`,
     explorer: true,
-    url: 'http://localhost:3001/',
+    url: `http://localhost:${process.env.PORT}/`,
     useGlobalPrefix: true,
     customCss: '',
     customCssUrl: '',
     customJs: '',
     customJsStr: '',
-    customfavIcon: '',
+    customfavIcon: 'https://phi.pertamina.com/img/logo-pertamina-48x48.png',
     validatorUrl: '',
     jsonDocumentUrl: '',
     yamlDocumentUrl: '',

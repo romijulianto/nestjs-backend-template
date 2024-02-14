@@ -14,7 +14,7 @@ import { ArticlesModule } from 'src/modules/articles/articles.module';
     PassportModule,
     JwtModule.register({
       secret: process.env.JWT_SECRET,
-      signOptions: { expiresIn: '5m' }, // e.g. 30s, 7d, 24h
+      signOptions: { expiresIn: '30d' }, // e.g. 30s, 7d, 24h
     }),
     UsersModule,
     ArticlesModule,
