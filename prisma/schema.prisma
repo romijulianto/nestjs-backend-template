@@ -83,7 +83,7 @@ model ShipmentGateOut {
   siodState        String
   stateDetail      Int
   supir            String
-  insertDate       DateTime
+  insertDate       String?
 }
 
 model ShipmentEndClose {
@@ -117,7 +117,7 @@ model ShipmentEndClose {
   siodState        String
   stateDetail      Int
   supir            String
-  insertDate       DateTime
+  insertDate       String?
 }
 
 model MmsVehicle {
@@ -216,5 +216,5 @@ model MmsVehicle {
   tipeMobil                 String?
   transportir               String?
   vendorGps                 String?
-  insertDate                DateTime  @default(now())
+  insertDate                String?
 }
