@@ -1,0 +1,30 @@
+BEGIN TRY
+
+BEGIN TRAN;
+
+-- AlterTable
+ALTER TABLE [dbo].[ShipmentEndClose] ALTER COLUMN [createDate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentEndClose] ALTER COLUMN [gateoutTime] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentEndClose] ALTER COLUMN [lastUpdate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentEndClose] ALTER COLUMN [shipmentDate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentEndClose] ALTER COLUMN [shipmentEnd] NVARCHAR(1000) NULL;
+
+-- AlterTable
+ALTER TABLE [dbo].[ShipmentGateOut] ALTER COLUMN [createDate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentGateOut] ALTER COLUMN [gateoutTime] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentGateOut] ALTER COLUMN [lastUpdate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentGateOut] ALTER COLUMN [shipmentDate] NVARCHAR(1000) NULL;
+ALTER TABLE [dbo].[ShipmentGateOut] ALTER COLUMN [shipmentEnd] NVARCHAR(1000) NULL;
+
+COMMIT TRAN;
+
+END TRY
+BEGIN CATCH
+
+IF @@TRANCOUNT > 0
+BEGIN
+    ROLLBACK TRAN;
+END;
+THROW
+
+END CATCH

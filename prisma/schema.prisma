@@ -55,7 +55,7 @@ model MtGpsLastLocation {
 model ShipmentGateOut {
   id               String   @id @unique @default(uuid())
   plantCode        String
-  createDate       DateTime
+  createDate       String?
   nomorLo          String
   kodeProduk       String
   produk           String
@@ -66,18 +66,18 @@ model ShipmentGateOut {
   sonumber         String
   gisStatus        String
   extraInfo        String
-  gateoutTime      DateTime
+  gateoutTime      String?
   jmlsegel         Int
   kernet           String
-  lastUpdate       DateTime
+  lastUpdate       String?
   mt               String
   mysapshipmentnum String
   mysapstatus      String
   nipKernet        String
   nipSupir         String
   segel            String
-  shipmentDate     DateTime
-  shipmentEnd      DateTime
+  shipmentDate     String?
+  shipmentEnd      String?
   shipmentId       Int
   siodId           String
   siodState        String
@@ -89,7 +89,7 @@ model ShipmentGateOut {
 model ShipmentEndClose {
   id               String   @id @unique @default(uuid())
   plantCode        String
-  createDate       DateTime
+  createDate       String?
   nomorLo          String
   kodeProduk       String
   produk           String
@@ -100,18 +100,18 @@ model ShipmentEndClose {
   sonumber         String
   gisStatus        String
   extraInfo        String
-  gateoutTime      DateTime
+  gateoutTime      String?
   jmlsegel         Int
   kernet           String
-  lastUpdate       DateTime
+  lastUpdate       String?
   mt               String
   mysapshipmentnum String
   mysapstatus      String
   nipKernet        String
   nipSupir         String
   segel            String
-  shipmentDate     DateTime
-  shipmentEnd      DateTime
+  shipmentDate     String?
+  shipmentEnd      String?
   shipmentId       Int
   siodId           String
   siodState        String
