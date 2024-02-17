@@ -53,7 +53,7 @@ model MtGpsLastLocation {
 }
 
 model ShipmentGateOut {
-  id               String   @id @unique @default(uuid())
+  id               String    @id @unique @default(uuid())
   plantCode        String
   createDate       String?
   nomorLo          String
@@ -83,11 +83,11 @@ model ShipmentGateOut {
   siodState        String
   stateDetail      Int
   supir            String
-  insertDate       String?
+  insertDate       DateTime?
 }
 
 model ShipmentEndClose {
-  id               String   @id @unique @default(uuid())
+  id               String    @id @unique @default(uuid())
   plantCode        String
   createDate       String?
   nomorLo          String
@@ -117,7 +117,7 @@ model ShipmentEndClose {
   siodState        String
   stateDetail      Int
   supir            String
-  insertDate       String?
+  insertDate       DateTime?
 }
 
 model MmsVehicle {
@@ -216,5 +216,5 @@ model MmsVehicle {
   tipeMobil                 String?
   transportir               String?
   vendorGps                 String?
-  insertDate                String?
+  insertDate                DateTime?
 }
