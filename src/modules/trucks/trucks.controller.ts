@@ -5,6 +5,7 @@ import {
   Query,
   NotFoundException,
   HttpStatus,
+  BadGatewayException,
 } from '@nestjs/common';
 import { TrucksService } from './trucks.service';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
@@ -41,9 +42,7 @@ export class TrucksController {
       }
       return new ApiResponse(HttpStatus.OK, 'success', data);
     } catch (error) {
-      throw new NotFoundException(
-        `${ApiResponseCustomMessage.VEHICLE_NOT_FOUND} ${plat}`,
-      ).getResponse();
+      throw new BadGatewayException();
     }
   }
 }

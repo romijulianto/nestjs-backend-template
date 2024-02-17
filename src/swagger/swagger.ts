@@ -9,6 +9,7 @@ export function setupSwagger(app: INestApplication) {
     .setVersion('1.0')
     .addTag('auth', 'endpoint for auth get token')
     .addTag('trucks', 'endpoint for truck transactioin')
+    .addTag('shipments', 'endpoint for shipment transactioin')
     /* .addTag('articles', 'endpoint for article transaction') */
     .addTag('users', 'endpoint for users transaction')
     .setBasePath('api/docs')
