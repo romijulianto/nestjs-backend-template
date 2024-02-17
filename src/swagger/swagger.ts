@@ -7,9 +7,10 @@ export function setupSwagger(app: INestApplication) {
     .setTitle('Supply and Distribution Monitoring Backend')
     .setDescription('The SnD API description')
     .setVersion('1.0')
-    .addTag('articles', 'endpoint for article transaction')
-    .addTag('users', 'endpoint for users transaction')
     .addTag('auth', 'endpoint for auth get token')
+    .addTag('trucks', 'endpoint for truck transactioin')
+    /* .addTag('articles', 'endpoint for article transaction') */
+    .addTag('users', 'endpoint for users transaction')
     .setBasePath('api/docs')
     .addBearerAuth()
     .addServer(`http://localhost:${process.env.PORT}/`, 'HTTP')
@@ -28,7 +29,7 @@ export function setupSwagger(app: INestApplication) {
       displayRequestDuration: true,
       filter: true,
     },
-    customSiteTitle: 'SND Monitoring',
+    customSiteTitle: 'API WebGIS Supply and Distribution Monitoring',
     swaggerUrl: `http://localhost:${process.env.PORT}/snd/api/docs/`,
     explorer: true,
     url: `http://localhost:${process.env.PORT}/`,

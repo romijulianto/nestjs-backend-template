@@ -6,6 +6,7 @@ export enum ApiResponseCustomMessage {
   USERS_NOT_FOUND = 'Could not find user with id:',
   USERS_UPDATE = 'User updated with id:',
   USERS_DELETE = 'User deleted with id:',
+  VEHICLE_NOT_FOUND = 'Could not find mobil tangki with plat:',
 }
 
 // TODO: create generic class with T
